@@ -1,0 +1,19 @@
+package com.nla.audit.entity;
+
+public enum AuditAction {
+    CREATED,
+    UPDATED,
+    STATUS_CHANGED,
+    SUBMITTED,
+    VERIFIED,
+    APPROVED,
+    REJECTED,
+    RETURNED,
+    AWARD_DECLARED,
+    PAYMENT_INITIATED,
+    PAYMENT_COMPLETED,
+    POSSESSION_TAKEN,
+    DOCUMENT_UPLOADED,
+    DOCUMENT_DELETED,
+    DELETED
+}
