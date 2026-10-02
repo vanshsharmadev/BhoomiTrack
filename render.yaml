@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: nlams-backend
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: postgres
+      - key: DB_HOST
+        fromDatabase:
+          name: nlams-postgres
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: nlams-postgres
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: nlams-postgres
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: nlams-postgres
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: nlams-postgres
+          property: password
+
+databases:
+  - name: nlams-postgres
+    plan: free
+    databaseName: nlams_db
+    user: postgres
