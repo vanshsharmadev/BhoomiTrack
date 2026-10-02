@@ -22,7 +22,7 @@ public interface AffectedFamilyRepository extends JpaRepository<AffectedFamily, 
             "(:projectId IS NULL OR f.project.id = :projectId) AND " +
             "(:category IS NULL OR f.category = :category) AND " +
             "(:status IS NULL OR f.rehabilitationStatus = :status) AND " +
-            "(:district IS NULL OR LOWER(f.district) = LOWER(:district)) " +
+            "(CAST(:district AS string) IS NULL OR LOWER(f.district) = LOWER(CAST(:district AS string))) " +
             "ORDER BY f.id DESC")
     Page<AffectedFamily> findByFilters(
             @Param("projectId") Long projectId,

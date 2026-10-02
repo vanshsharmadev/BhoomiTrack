@@ -28,9 +28,9 @@ public interface LandParcelRepository extends JpaRepository<LandParcel, Long> {
 
     @Query("SELECT lp FROM LandParcel lp WHERE " +
             "(:projectId IS NULL OR lp.project.id = :projectId) AND " +
-            "(:district IS NULL OR LOWER(lp.district) = LOWER(:district)) AND " +
+            "(CAST(:district AS string) IS NULL OR LOWER(lp.district) = LOWER(CAST(:district AS string))) AND " +
             "(:status IS NULL OR lp.acquisitionStatus = :status) AND " +
-            "(:village IS NULL OR LOWER(lp.village) = LOWER(:village)) " +
+            "(CAST(:village AS string) IS NULL OR LOWER(lp.village) = LOWER(CAST(:village AS string))) " +
             "ORDER BY lp.id ASC")
     Page<LandParcel> findByFilters(
             @Param("projectId") Long projectId,
