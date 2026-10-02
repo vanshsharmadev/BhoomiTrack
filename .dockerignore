@@ -1,0 +1,15 @@
+target/
+**/target/
+.git
+.gitignore
+.idea
+*.iml
+*.iws
+*.ipr
+.vscode
+.settings
+.project
+.classpath
+uploads/
+**/uploads/
+*.log
