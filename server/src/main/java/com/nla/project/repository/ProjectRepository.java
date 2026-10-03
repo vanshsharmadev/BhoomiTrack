@@ -21,8 +21,8 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
     boolean existsByProjectCode(String projectCode);
 
     @Query("SELECT p FROM Project p WHERE " +
-            "(:state IS NULL OR LOWER(p.state) = LOWER(:state)) AND " +
-            "(:district IS NULL OR LOWER(p.district) = LOWER(:district)) AND " +
+            "(CAST(:state AS string) IS NULL OR LOWER(p.state) = LOWER(CAST(:state AS string))) AND " +
+            "(CAST(:district AS string) IS NULL OR LOWER(p.district) = LOWER(CAST(:district AS string))) AND " +
             "(:status IS NULL OR p.status = :status) AND " +
             "(:projectType IS NULL OR p.projectType = :projectType) " +
             "ORDER BY p.createdAt DESC")

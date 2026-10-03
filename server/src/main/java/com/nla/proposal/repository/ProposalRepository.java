@@ -24,8 +24,8 @@ public interface ProposalRepository extends JpaRepository<Proposal, Long> {
     @Query("SELECT p FROM Proposal p WHERE " +
             "(:projectId IS NULL OR p.project.id = :projectId) AND " +
             "(:status IS NULL OR p.status = :status) AND " +
-            "(:district IS NULL OR LOWER(p.district) = LOWER(:district)) AND " +
-            "(:state IS NULL OR LOWER(p.state) = LOWER(:state)) " +
+            "(CAST(:district AS string) IS NULL OR LOWER(p.district) = LOWER(CAST(:district AS string))) AND " +
+            "(CAST(:state AS string) IS NULL OR LOWER(p.state) = LOWER(CAST(:state AS string))) " +
             "ORDER BY p.createdAt DESC")
     Page<Proposal> findByFilters(
             @Param("projectId") Long projectId,

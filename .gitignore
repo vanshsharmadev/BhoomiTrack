@@ -3,6 +3,8 @@ target/
 **/target/
 uploads/
 **/uploads/
+.env
+*.env
 
 ### STS ###
 .apt_generated
