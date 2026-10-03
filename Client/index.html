@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="National Land Acquisition Management System (NLAMS) - Unified statutory infrastructure platform for land acquisition, compensation DBT, and rehabilitation under RFCTLARR Act 2013 and PM GatiShakti." />
+    <title>BhoomiTrack | National Land Acquisition & Management System (NLAMS)</title>
+
+    <!-- Google Fonts: Inter & Material Symbols Outlined -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <!-- Sovereign Civic Infrastructure Tailwind Theme Setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#000f22",
+              "primary-container": "#0a2540",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#768dad",
+              "inverse-primary": "#b0c8eb",
+              "secondary": "#3a6188",
+              "secondary-container": "#acd2ff",
+              "on-secondary-container": "#335b81",
+              "on-secondary": "#ffffff",
+              "surface": "#f8f9ff",
+              "surface-dim": "#cadcf4",
+              "surface-bright": "#f8f9ff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#eef4ff",
+              "surface-container": "#e4efff",
+              "surface-container-high": "#dbe9ff",
+              "surface-container-highest": "#d2e4fd",
+              "on-surface": "#0a1d2f",
+              "on-surface-variant": "#43474d",
+              "inverse-surface": "#213245",
+              "inverse-on-surface": "#e9f1ff",
+              "outline": "#74777e",
+              "outline-variant": "#c4c6ce",
+              "surface-tint": "#49607e",
+              "background": "#f8f9ff",
+              "on-background": "#0a1d2f",
+              "surface-variant": "#d2e4fd",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "tertiary": "#200700",
+              "tertiary-container": "#421700",
+              "on-tertiary-container": "#e46514",
+              "primary-fixed": "#d2e4ff",
+              "primary-fixed-dim": "#b0c8eb",
+              "secondary-fixed": "#d0e4ff",
+              "secondary-fixed-dim": "#a3caf6",
+              "gov-green": "#107307",
+              "gov-saffron": "#d95d08",
+              "gov-crimson": "#a61b1b"
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "sm": "0.125rem",
+              "md": "0.375rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            spacing: {
+              "space-xs": "0.25rem",
+              "space-sm": "0.5rem",
+              "space-md": "0.75rem",
+              "space-lg": "1.25rem",
+              "space-xl": "1.75rem",
+              "margin": "1.5rem",
+              "margin-mobile": "0.75rem",
+              "gutter": "1rem"
+            },
+            fontFamily: {
+              sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+              "code-tabular": ["Inter", "monospace"]
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-background text-on-surface font-sans antialiased min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

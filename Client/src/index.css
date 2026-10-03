@@ -1,0 +1,107 @@
+/* Sovereign Civic Infrastructure - Core Global Styles */
+
+@layer base {
+  :root {
+    --primary: #000f22;
+    --primary-container: #0a2540;
+    --on-primary: #ffffff;
+    --secondary: #3a6188;
+    --secondary-container: #acd2ff;
+    --surface: #f8f9ff;
+    --surface-lowest: #ffffff;
+    --surface-low: #eef4ff;
+    --surface-high: #dbe9ff;
+    --on-surface: #0a1d2f;
+    --on-surface-variant: #43474d;
+    --outline: #74777e;
+    --outline-variant: #c4c6ce;
+    --error: #ba1a1a;
+    --gov-green: #107307;
+    --gov-saffron: #d95d08;
+    --gov-crimson: #a61b1b;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--surface);
+    color: var(--on-surface);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    /* Exact 80% viewport scale: Ensures that when browser zoom is set to 100%, 
+       the entire application displays at the exact spacious 80% density without any collapsing */
+    zoom: 0.8;
+  }
+
+  /* Strict Tabular Numbers for Alphanumeric Cadastral Codes and Currency */
+  .font-code-tabular,
+  .tabular-nums,
+  table td,
+  table th {
+    font-feature-settings: "cv02" 1, "cv03" 1, "cv04" 1, "tnum" 1;
+  }
+}
+
+
+/* Institutional Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Hairline Grid & Table Polish */
+.hairline-border {
+  border: 1px solid #d1d9e2;
+}
+
+.table-sticky-header thead th {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: #f8fafc;
+  box-shadow: 0 1px 0 #d1d9e2;
+}
+
+/* High Contrast Focus States for WCAG AAA Accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #0a2540;
+  outline-offset: 2px;
+}
+
+/* Print Rules for Official Dossiers & Panchnama Handover Memos */
+@media print {
+  aside,
+  header,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}
