@@ -110,13 +110,13 @@ export const AppShell = ({ children }) => {
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
-                <span className="font-bold text-primary tracking-tight text-base uppercase">NLAMS</span>
+                <span className="font-bold text-primary tracking-tight text-base font-sans">BhoomiTrack</span>
                 <span className="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-mono text-[10px] uppercase font-semibold">
-                  Gov of India
+                  NLAMS
                 </span>
               </div>
-              <span className="text-[11px] text-on-surface-variant truncate max-w-[260px] hidden sm:block">
-                Ministry of Rural Development • PM GatiShakti NMP
+              <span className="text-[11px] text-on-surface-variant truncate max-w-[280px] hidden sm:block">
+                National Land Acquisition & Management System • Gov of India
               </span>
             </div>
           </div>
@@ -305,11 +305,11 @@ export const AppShell = ({ children }) => {
           {/* System Version & Statutory Compliance Footer */}
           <div className="p-3 border-t border-outline-variant/20 bg-surface-container-low/40 text-[10px] font-mono text-outline">
             <div className="flex justify-between items-center font-bold text-secondary">
-              <span>NLAMS • RFCTLARR 2013</span>
+              <span>BhoomiTrack • NLAMS</span>
               <span>v2.4.0</span>
             </div>
             <div className="text-[9px] text-on-surface-variant mt-0.5">
-              NIC e-Gov Standard • DoLR MoRD
+              RFCTLARR 2013 • DoLR MoRD Government of India
             </div>
           </div>
         </aside>

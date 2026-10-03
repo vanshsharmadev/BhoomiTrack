@@ -769,7 +769,7 @@ export const GisPage = () => {
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5 text-primary font-bold">
             <span className="material-symbols-outlined text-secondary text-[20px]">map</span>
-            <span className="text-sm tracking-tight">National Cadastral GIS</span>
+            <span className="text-sm tracking-tight font-sans">BhoomiTrack Cadastral GIS</span>
             <span className="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary text-[10px] font-mono font-semibold uppercase">
               Leaflet • WGS84
             </span>
