@@ -4,7 +4,7 @@ services:
     env: docker
     dockerfilePath: Dockerfile
     plan: free
-    healthCheckPath: /actuator/health
+    healthCheckPath: /health
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: postgres

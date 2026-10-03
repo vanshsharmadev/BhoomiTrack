@@ -14,9 +14,43 @@ Welcome to the **National Land Acquisition & Management System (NLAMS) / BhoomiT
 
 - **Interactive Swagger UI**: [`http://localhost:8080/swagger-ui.html`](http://localhost:8080/swagger-ui.html)
 - **Raw OpenAPI 3.0 JSON Spec**: [`http://localhost:8080/v3/api-docs`](http://localhost:8080/v3/api-docs)
-- **Health Check Probe**: [`http://localhost:8080/actuator/health`](http://localhost:8080/actuator/health)
+- **Health & Readiness Check**: [`http://localhost:8080/health`](http://localhost:8080/health) or [`http://localhost:8080/api/health`](http://localhost:8080/api/health)
+- **Spring Actuator Probe**: [`http://localhost:8080/actuator/health`](http://localhost:8080/actuator/health)
 
 ---
+
+### 🩺 Health Check Response Format (`GET /health` or `GET /api/health`)
+Checks PostgreSQL connection, PostGIS spatial extension, JVM memory allocation, and system uptime:
+```json
+{
+  "status": "UP",
+  "application": "National Land Acquisition & Management System (BhoomiTrack)",
+  "timestamp": "2026-10-03T13:35:00Z",
+  "uptimeSeconds": 1420,
+  "uptimeFormatted": "0d 00h 23m 40s",
+  "activeProfiles": ["postgres"],
+  "components": {
+    "database": {
+      "status": "UP",
+      "databaseProduct": "PostgreSQL",
+      "databaseVersion": "16.3",
+      "postgis": "ENABLED"
+    },
+    "jvmMemory": {
+      "status": "UP",
+      "usedMb": 182,
+      "freeMb": 146,
+      "totalAllocatedMb": 328,
+      "maxAvailableMb": 512
+    },
+    "diskSpace": {
+      "status": "UP",
+      "freeMb": 48210,
+      "totalMb": 102400
+    }
+  }
+}
+```
 
 ## 📦 2. Standard Response Wrapper
 
