@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary-fixed-dim": "#ffb693",
+          "inverse-primary": "#b0c8eb",
+          "on-secondary-container": "#335b81",
+          "inverse-surface": "#213245",
+          "inverse-on-surface": "#e9f1ff",
+          "primary-container": "#0a2540",
+          "on-background": "#0a1d2f",
+          "surface-dim": "#cadcf4",
+          "on-secondary-fixed": "#001d35",
+          "tertiary-fixed": "#ffdbcb",
+          "surface": "#f8f9ff",
+          "error": "#ba1a1a",
+          "on-surface": "#0a1d2f",
+          "secondary": "#3a6188",
+          "on-error": "#ffffff",
+          "primary-fixed": "#d2e4ff",
+          "on-tertiary-container": "#e46514",
+          "on-tertiary-fixed": "#341000",
+          "surface-variant": "#d2e4fd",
+          "primary": "#000f22",
+          "outline": "#74777e",
+          "surface-bright": "#f8f9ff",
+          "background": "#f8f9ff",
+          "on-secondary": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed-variant": "#1f496f",
+          "on-primary-fixed-variant": "#314865",
+          "secondary-fixed-dim": "#a3caf6",
+          "on-tertiary-fixed-variant": "#7a3000",
+          "tertiary": "#200700",
+          "surface-container": "#e4efff",
+          "secondary-fixed": "#d0e4ff",
+          "error-container": "#ffdad6",
+          "surface-container-low": "#eef4ff",
+          "primary-fixed-dim": "#b0c8eb",
+          "surface-container-highest": "#d2e4fd",
+          "outline-variant": "#c4c6ce",
+          "on-error-container": "#93000a",
+          "on-primary": "#ffffff",
+          "surface-tint": "#49607e",
+          "surface-container-high": "#dbe9ff",
+          "on-surface-variant": "#43474d",
+          "on-tertiary": "#ffffff",
+          "on-primary-fixed": "#001c37",
+          "on-primary-container": "#768dad",
+          "tertiary-container": "#421700",
+          "secondary-container": "#acd2ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-xl": "1.75rem",
+          "gutter": "1rem",
+          "space-md": "0.75rem",
+          "gutter-mobile": "0.75rem",
+          "margin-mobile": "0.75rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.25rem",
+          "margin": "1.5rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "headline-xl-mobile": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "label-lg": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "code-tabular": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "headline-xl-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "12px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "700"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "15px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "code-tabular": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col"><div class="h-16 px-margin flex items-center gap-space-sm bg-primary-container text-on-primary shrink-0"><div class="w-9 h-9 rounded bg-surface flex items-center justify-center font-headline-sm text-headline-sm text-primary-container font-bold">GOI</div><div><div class="font-label-lg text-label-lg tracking-wide uppercase text-on-primary">NLAMS · PORTAL</div><div class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider">Govt. of India Enterprise</div></div></div><div class="flex-1 overflow-y-auto py-space-md px-space-sm"><nav class="space-y-space-lg" data-active-classes="bg-primary-container text-on-primary font-label-md rounded"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">1. Overview</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="national-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>National Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="state-monitoring" href="#"><span class="material-symbols-outlined text-[18px]">map</span><span>State Monitoring</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="central-project-registry" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span><span>Central Project Registry</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="route-directory" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span><span>Route Directory</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">2. Land Acquisition</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="proposals-and-dpr-scrutiny" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Proposals &amp; DPR Scrutiny</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="cadastral-parcels" href="#"><span class="material-symbols-outlined text-[18px]">domain</span><span>Cadastral Parcels</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="statutory-notifications" href="#"><span class="material-symbols-outlined text-[18px]">campaign</span><span>Statutory Notifications</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="joint-verification-and-survey" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>Joint Verification &amp; Survey</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="claims-and-objections" href="#"><span class="material-symbols-outlined text-[18px]">gavel</span><span>Claims &amp; Objections</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="award-and-compensation" href="#"><span class="material-symbols-outlined text-[18px]">request_quote</span><span>Award &amp; Compensation</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="possession-handover" href="#"><span class="material-symbols-outlined text-[18px]">key</span><span>Possession Handover</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">3. Land &amp; Beneficiaries</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="landowners-registry" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Landowners Registry</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="affected-families" href="#"><span class="material-symbols-outlined text-[18px]">groups</span><span>Affected Families</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="grievance-redressal" href="#"><span class="material-symbols-outlined text-[18px]">report_problem</span><span>Grievance Redressal</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="r-and-r-management" href="#"><span class="material-symbols-outlined text-[18px]">foundation</span><span>R&amp;R Management</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">4. Compensation &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="direct-compensation-dbt" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span>Direct Compensation DBT</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">5. GIS &amp; Intelligence</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="national-cadastral-gis" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span>National Cadastral GIS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="ai-risk-and-delay-radar" href="#"><span class="material-symbols-outlined text-[18px]">radar</span><span>AI Risk &amp; Delay Radar</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">6. Governance</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="gazette-and-legal-vault" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Gazette &amp; Legal Vault</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-label-md rounded" data-path="audit-trail-log" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Audit Trail Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="rti-and-transparency" href="#"><span class="material-symbols-outlined text-[18px]">visibility</span><span>RTI &amp; Transparency</span></a></div></nav></div><div class="p-space-sm bg-surface-container shrink-0"><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>L-4 SECURE NODE</span><span class="font-code-tabular text-code-tabular text-secondary">v4.1.8-NIC</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-label-lg text-label-lg font-bold text-on-surface tracking-wide uppercase">Ministry of Road Transport &amp; Highways</span><span class="font-label-sm text-label-sm text-secondary">Department of Land Acquisition and Resettlement</span></div><div class="hidden xl:flex items-center bg-surface-container-low px-space-md py-space-xs rounded gap-space-xs"><span class="material-symbols-outlined text-secondary text-[16px]">search</span><input class="bg-transparent text-body-sm font-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none w-64" placeholder="Search Parcel Khasra, Gazette ID, Project..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span><span class="font-label-sm text-label-sm font-bold text-on-secondary-container">NIC e-Gov Vault Level-4</span></div><div class="flex items-center gap-space-sm"><div class="text-right"><div class="font-label-md text-label-md font-bold text-on-surface">Dr. R. K. Verma, IAS</div><div class="font-label-sm text-label-sm text-secondary">Joint Secretary &amp; Competent Authority</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface w-full px-margin"><div class="flex flex-col w-full">
+<!-- BREADCRUMB & AUDIT COMPLIANCE STRIP -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm py-space-sm mb-space-md bg-surface-container-low px-space-md rounded">
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-secondary">
+<span class="font-label-sm uppercase tracking-wider text-on-surface-variant font-bold">NLAMS Central Repository</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Governance</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Audit Trail Log (/governance/audit)</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-[#EAF7EC] text-[#107307]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#107307]"></span>
+<span class="font-label-sm text-label-sm tracking-wider">CAG AUDIT-READY COMPLIANT</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm tracking-wider">IMMUTABLE BLOCK-CHAIN PROVENANCE LEVEL 4</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[13px]">security</span>
+<span class="font-label-sm text-label-sm tracking-wider">STQC ISO 27001 AUDITED</span>
+</div>
+</div>
+</div>
+<!-- TOP ACTION BAR -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Immutable Audit Trail &amp; Statutory Event Log</h1>
+<span class="px-space-xs py-0.5 bg-primary text-on-primary font-code-tabular text-label-sm rounded uppercase">RFC 3161 TSP</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Continuous cryptographic ledger of all Land Acquisition (RFCTLARR Act, 2013) sovereign decisions, disbursements &amp; field cadastre changes.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-lowest shadow-sm rounded">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#107307] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#107307]"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">LIVE STREAM: ACTIVE (1s Polling)</span>
+</div>
+<button class="px-space-md py-space-xs bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded flex items-center gap-space-xs" id="btnFilterTrigger">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Security / Risk Filter</span>
+</button>
+<button class="px-space-md py-space-xs bg-surface-container-lowest text-primary hover:bg-surface-container-low transition-colors shadow-sm font-label-md text-label-md rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">history_edu</span>
+<span>Corridor Provenance Dossier</span>
+</button>
+<button class="px-space-md py-space-xs bg-primary-container text-on-primary hover:bg-primary transition-colors font-label-md text-label-md rounded shadow-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Export CAG Audit Ledger (CSV / Signed PDF)</span>
+</button>
+</div>
+</div>
+<!-- EXECUTIVE AUDIT KPI RIBBON -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Total Statutory Events (24h)</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">database</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl font-bold text-primary font-code-tabular">4,289</span>
+<span class="font-label-sm text-label-sm text-[#107307] font-bold">+18.4% vs prev.</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs truncate">System transactions, notifications &amp; field sign-offs</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">High-Consequence Actions</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">policy</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl font-bold text-tertiary-container font-code-tabular">184</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">Requires Co-Sign</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs truncate">Award approvals, Sec 38 vestings, DBT pay triggers</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Cryptographic Verify Rate</span>
+<span class="material-symbols-outlined text-[18px] text-[#107307]">key</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl font-bold text-[#107307] font-code-tabular">100.0%</span>
+<span class="font-label-sm text-label-sm text-secondary">Zero Non-DSC Logs</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs truncate">SHA-256 Merkle root linked with CCA-approved DSC</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">System Integrity Score</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl font-bold text-primary font-code-tabular">99.98%</span>
+<span class="font-label-sm text-label-sm text-[#107307] font-bold">Nominal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs truncate">Zero un-audited state drifts or database alterations</p>
+</div>
+</div>
+<!-- COMPREHENSIVE FILTER STRIP -->
+<div class="bg-surface-container-low p-space-md rounded mb-space-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<div class="md:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-space-sm top-2 text-secondary text-[18px]">search</span>
+<input class="w-full h-[34px] pl-9 pr-space-sm bg-surface-container-lowest text-on-surface placeholder-on-surface-variant font-body-sm text-body-sm rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="Filter Officer, Designation, IP, Corridor, Khasra, Hash..." type="text"/>
+</div>
+<div class="md:col-span-8 flex flex-wrap items-center gap-space-xs justify-end">
+<select class="h-[34px] bg-surface-container-lowest px-space-sm text-body-sm font-body-sm text-on-surface rounded shadow-sm focus:outline-none">
+<option value="">Classification: All Events</option>
+<option value="statutory">Statutory Gate (Sec 11/15/19/23)</option>
+<option value="financial">Financial DBT Gateway</option>
+<option value="survey">Field Survey &amp; Panchnama</option>
+<option value="seal">Document Gazette Seal</option>
+<option value="override">Exception Override</option>
+</select>
+<select class="h-[34px] bg-surface-container-lowest px-space-sm text-body-sm font-body-sm text-on-surface rounded shadow-sm focus:outline-none">
+<option value="">Officer Role: All Roles</option>
+<option value="js">Joint Secretary / DG</option>
+<option value="cala">CALA / District Magistrate</option>
+<option value="amin">Amin / Surveyor (DGPS)</option>
+<option value="pfms">PFMS Automated Node</option>
+</select>
+<select class="h-[34px] bg-surface-container-lowest px-space-sm text-body-sm font-body-sm text-on-surface rounded shadow-sm focus:outline-none">
+<option value="">Severity: Standard &amp; Critical</option>
+<option value="standard">Standard Event</option>
+<option value="sensitive">Sensitive Financial &gt; ₹50L</option>
+<option value="override">High-Risk / Override Audit</option>
+</select>
+<button class="h-[34px] px-space-md bg-secondary text-on-secondary rounded font-label-md text-label-md hover:bg-on-secondary-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">filter_alt</span>
+<span>Apply</span>
+</button>
+<button class="h-[34px] px-space-sm bg-surface-container-high text-on-surface-variant rounded font-label-md text-label-md hover:bg-surface-dim transition-colors" title="Reset Filters">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- WORKSPACE SPLIT: AUDIT LEDGER (MAIN TABLE) + EVENT AUDIT SNAPSHOT INSPECTOR (DRAWER/PANEL) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- TABLE AREA (8 COLS ON DESKTOP) -->
+<div class="lg:col-span-8 flex flex-col bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+<!-- Table Header Status Bar -->
+<div class="px-space-md py-space-xs bg-surface-container flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-bold text-primary">AUDIT_BLOCK_STREAM_ID: #892841-IND</span>
+<span class="font-code-tabular text-secondary">Merkle Epoch: 2024-Q4-DEL</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-tabular">
+<span>Showing 5 of 4,289</span>
+<span class="w-1 h-1 rounded-full bg-secondary"></span>
+<span>Buffer: 0 dropped</span>
+</div>
+</div>
+<!-- Ledger Table -->
+<div class="overflow-x-auto">
+<table class="w-full border-collapse text-left">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-xs px-space-sm">Timestamp (IST)</th>
+<th class="py-space-xs px-space-sm">Officer &amp; Authority</th>
+<th class="py-space-xs px-space-sm">Event Code &amp; Action</th>
+<th class="py-space-xs px-space-sm">Corridor &amp; Target</th>
+<th class="py-space-xs px-space-sm">Prior State → New State</th>
+<th class="py-space-xs px-space-sm">Provenance / IP</th>
+<th class="py-space-xs px-space-sm text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0 text-on-surface">
+<!-- Row 1: Selected for Inspector -->
+<tr class="bg-surface-container-high/60 hover:bg-surface-container-high transition-colors cursor-pointer" onclick="selectEventRow(1)">
+<td class="py-space-sm px-space-sm font-code-tabular whitespace-nowrap">
+<div class="font-bold text-primary">25-Oct-2024</div>
+<div class="text-secondary text-label-sm">14:32:08.102</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="font-bold text-primary flex items-center gap-1">
+<span>Dr. R. K. Varma, IAS</span>
+<span class="material-symbols-outlined text-[14px] text-[#107307]" title="DSC Digitally Signed">verified</span>
+</div>
+<div class="text-secondary text-label-sm">CALA &amp; Director General</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-code-tabular text-label-sm font-bold">SEC23_AWRD_APPRV</span>
+<div class="text-on-surface-variant text-label-sm mt-0.5">Award Final Approval</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="font-bold text-on-surface">NHAI-DME-PKG-14</div>
+<div class="text-secondary text-label-sm font-code-tabular">Kh: 89/1-A (3.42 Ha)</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="text-on-surface-variant font-code-tabular text-label-sm">Draft Schedule</div>
+<div class="text-[#107307] font-code-tabular font-bold text-label-sm">→ Sealed (₹83,05,300)</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="font-code-tabular text-label-sm text-secondary">10.124.9.44 (NIC-NET)</div>
+<div class="text-label-sm text-[#107307] font-code-tabular">DSC: SHA-256 Valid</div>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<div class="inline-flex gap-1">
+<button class="px-2 py-1 bg-primary text-on-primary rounded text-label-sm font-label-sm hover:bg-primary-container">Inspect</button>
+<button class="px-2 py-1 bg-surface-container text-on-surface rounded text-label-sm font-label-sm hover:bg-surface-container-highest">Diff</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectEventRow(2)">
+<td class="py-space-sm px-space-sm font-code-tabular whitespace-nowrap">
+<div class="font-bold text-primary">25-Oct-2024</div>
+<div class="text-secondary text-label-sm">13:15:42.881</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="font-bold text-primary flex items-center gap-1">
+<span>Sh. M. K. Verma, IAS</span>
+<span class="material-symbols-outlined text-[14px] text-[#107307]">verified</span>
+</div>
+<div class="text-secondary text-label-sm">District Magistrate (Rewari)</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code-tabular text-label-sm font-bold">SEC19_NOTIF_EXT</span>
+<div class="text-on-surface-variant text-label-sm mt-0.5">Statutory Notice Dispatch</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="font-bold text-on-surface">DFCCIL-WDFC-PKG-02</div>
+<div class="text-secondary text-label-sm font-code-tabular">Sec-19 Declaration</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="text-on-surface-variant font-code-tabular text-label-sm">Pending 348d</div>
+<div class="text-tertiary-container font-code-tabular font-bold text-label-sm">→ Emergency Ext. Dispatched</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="font-code-tabular text-label-sm text-secondary">10.88.14.21 (Govt Intra)</div>
+<div class="text-label-sm text-[#107307] font-code-tabular">DSC: SHA-256 Valid</div>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<div class="inline-flex gap-1">
+<button class="px-2 py-1 bg-surface-container text-on-surface rounded text-label-sm font-label-sm hover:bg-surface-container-high">Inspect</button>
+<button class="px-2 py-1 bg-surface-container text-on-surface rounded text-label-sm font-label-sm hover:bg-surface-container-highest">Diff</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectEventRow(3)">
+<td class="py-space-sm px-space-sm font-code-tabular whitespace-nowrap">
+<div class="font-bold text-primary">25-Oct-2024</div>
+<div class="text-secondary text-label-sm">11:48:19.450</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="font-bold text-primary flex items-center gap-1">
+<span>Sh. R. K. Varma &amp; Patwari</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">smartphone</span>
+</div>
+<div class="text-secondary text-label-sm">Lead Amin &amp; Survey Squad</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-tabular text-label-sm font-bold">JVS_PANCHNAMA_SIGN</span>
+<div class="text-on-surface-variant text-label-sm mt-0.5">Field Boundary Pegging</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="font-bold text-on-surface">NHAI-DME-PKG-14</div>
+<div class="text-secondary text-label-sm font-code-tabular">Pillar Marker GP-14</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="text-on-surface-variant font-code-tabular text-label-sm">Field Survey Draft</div>
+<div class="text-primary font-code-tabular font-bold text-label-sm">→ Signed &amp; Geotagged (±0.02m)</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="font-code-tabular text-label-sm text-secondary">172.16.4.89 (Rover GS18)</div>
+<div class="text-label-sm text-secondary font-code-tabular">Hardware Token UUID</div>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<div class="inline-flex gap-1">
+<button class="px-2 py-1 bg-surface-container text-on-surface rounded text-label-sm font-label-sm hover:bg-surface-container-high">Inspect</button>
+<button class="px-2 py-1 bg-surface-container text-on-surface rounded text-label-sm font-label-sm hover:bg-surface-container-highest">Diff</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectEventRow(4)">
+<td class="py-space-sm px-space-sm font-code-tabular whitespace-nowrap">
+<div class="font-bold text-primary">25-Oct-2024</div>
+<div class="text-secondary text-label-sm">10:20:05.019</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="font-bold text-primary flex items-center gap-1">
+<span>PFMS Gateway v4.2</span>
+<span class="material-symbols-outlined text-[14px] text-primary">smart_toy</span>
+</div>
+<div class="text-secondary text-label-sm">Ministry Payment Core Node</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="px-space-xs py-0.5 rounded bg-[#EAF7EC] text-[#107307] font-code-tabular text-label-sm font-bold">DBT_DISBURSE_INIT</span>
+<div class="text-on-surface-variant text-label-sm mt-0.5">Compensation Transfer</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="font-bold text-on-surface">NHAI-DME-PKG-14</div>
+<div class="text-secondary text-label-sm font-code-tabular">Beneficiary Escrow A/C</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="text-on-surface-variant font-code-tabular text-label-sm">₹0 Transfer</div>
+<div class="text-[#107307] font-code-tabular font-bold text-label-sm">→ ₹21,03,300 Credited</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="font-code-tabular text-label-sm text-secondary">10.2.0.18 (PFMS RBI Node)</div>
+<div class="text-label-sm text-secondary font-code-tabular">UTR: SBIN0029104821</div>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<div class="inline-flex gap-1">
+<button class="px-2 py-1 bg-surface-container text-on-surface rounded text-label-sm font-label-sm hover:bg-surface-container-high">Inspect</button>
+<button class="px-2 py-1 bg-surface-container text-on-surface rounded text-label-sm font-label-sm hover:bg-surface-container-highest">Diff</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectEventRow(5)">
+<td class="py-space-sm px-space-sm font-code-tabular whitespace-nowrap">
+<div class="font-bold text-primary">25-Oct-2024</div>
+<div class="text-secondary text-label-sm">09:12:33.722</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="font-bold text-primary flex items-center gap-1">
+<span>Shri Manish Kumar, IAS</span>
+<span class="material-symbols-outlined text-[14px] text-[#107307]">verified</span>
+</div>
+<div class="text-secondary text-label-sm">CALA &amp; District Collector</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-code-tabular text-label-sm font-bold">SEC15_OBJ_DISP</span>
+<div class="text-on-surface-variant text-label-sm mt-0.5">Objection Disposal</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="font-bold text-on-surface">NHAI-DME-PKG-14</div>
+<div class="text-secondary text-label-sm font-code-tabular">Case OBJ-084 (Kh 91)</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="text-on-surface-variant font-code-tabular text-label-sm">Hearing Scheduled</div>
+<div class="text-on-surface font-code-tabular font-bold text-label-sm">→ Speaking Order Passed</div>
+</td>
+<td class="py-space-sm px-space-sm whitespace-nowrap">
+<div class="font-code-tabular text-label-sm text-secondary">10.124.9.52 (NIC e-Office)</div>
+<div class="text-label-sm text-[#107307] font-code-tabular">DSC: SHA-256 Valid</div>
+</td>
+<td class="py-space-sm px-space-sm text-right whitespace-nowrap">
+<div class="inline-flex gap-1">
+<button class="px-2 py-1 bg-surface-container text-on-surface rounded text-label-sm font-label-sm hover:bg-surface-container-high">Inspect</button>
+<button class="px-2 py-1 bg-surface-container text-on-surface rounded text-label-sm font-label-sm hover:bg-surface-container-highest">Diff</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer Metadata Bar -->
+<div class="p-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm text-label-sm font-label-sm text-secondary">
+<div class="flex items-center gap-space-sm">
+<span>Cryptographic Hash Integrity verified every 60s via Gov NIC Ledger</span>
+<span class="font-code-tabular text-primary">Latency: 14ms</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2 py-1 bg-surface-container-lowest text-on-surface rounded shadow-sm hover:bg-surface-container font-code-tabular">Prev 50</button>
+<span class="px-2 font-code-tabular text-primary font-bold">Page 1 / 86</span>
+<button class="px-2 py-1 bg-surface-container-lowest text-on-surface rounded shadow-sm hover:bg-surface-container font-code-tabular">Next 50</button>
+</div>
+</div>
+</div>
+<!-- RIGHT HAND INSPECTOR: STATUTORY EVENT AUDIT SNAPSHOT INSPECTOR (4 COLS) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded shadow-md overflow-hidden">
+<!-- Panel Header -->
+<div class="bg-primary-container px-space-md py-space-sm text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-lg text-label-lg font-bold">Audit Snapshot Inspector</span>
+</div>
+<span class="px-space-xs py-0.5 bg-surface/20 rounded font-code-tabular text-label-sm">LIVE NODE</span>
+</div>
+<div class="p-space-md space-y-space-md">
+<!-- Metadata Table Card -->
+<div class="bg-surface-container-low p-space-sm rounded space-y-space-xs">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-secondary font-label-sm text-label-sm uppercase">Event ID:</span>
+<span class="font-code-tabular font-bold text-primary">EVT-2024-1025-AWRD-0044</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-secondary font-label-sm text-label-sm uppercase">Officer Identity:</span>
+<span class="font-bold text-on-surface truncate text-right ml-2">Dr. R. K. Varma, IAS</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-secondary font-label-sm text-label-sm uppercase">Designation:</span>
+<span class="text-on-surface-variant">Joint Secretary &amp; CALA</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-secondary font-label-sm text-label-sm uppercase">DSC Token Ref:</span>
+<span class="font-code-tabular text-secondary">NIC STQC L4 #9410-IN</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-secondary font-label-sm text-label-sm uppercase">Timestamp:</span>
+<span class="font-code-tabular text-on-surface">2024-10-25T14:32:08.102+05:30</span>
+</div>
+</div>
+<!-- State Delta JSON Diff Viewer -->
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">Statutory State Delta (JSON Diff)</span>
+<span class="font-code-tabular text-label-sm text-secondary">Unified Cadastre RFC-6902</span>
+</div>
+<div class="bg-primary text-on-primary p-space-sm rounded font-code-tabular text-body-sm leading-relaxed overflow-x-auto shadow-inner">
+<div class="text-secondary-fixed text-label-sm mb-1">// Target: Parcel Khasra 89/1-A / DME PKG-14</div>
+<div class="flex items-center text-[#ff8c8c] bg-error-container/20 px-1 rounded-sm">
+<span class="w-4 select-none">-</span>
+<span>"status": "IN_SCRUTINY"</span>
+</div>
+<div class="flex items-center text-[#99f399] bg-[#EAF7EC]/10 px-1 rounded-sm">
+<span class="w-4 select-none">+</span>
+<span>"status": "APPROVED_FINAL_ENFORCEABLE"</span>
+</div>
+<div class="flex items-center text-[#ff8c8c] bg-error-container/20 px-1 rounded-sm mt-1">
+<span class="w-4 select-none">-</span>
+<span>"total_award_val": 0</span>
+</div>
+<div class="flex items-center text-[#99f399] bg-[#EAF7EC]/10 px-1 rounded-sm">
+<span class="w-4 select-none">+</span>
+<span>"total_award_val": 8305300</span>
+</div>
+<div class="flex items-center text-[#ff8c8c] bg-error-container/20 px-1 rounded-sm mt-1">
+<span class="w-4 select-none">-</span>
+<span>"solatium_100_percent": 0</span>
+</div>
+<div class="flex items-center text-[#99f399] bg-[#EAF7EC]/10 px-1 rounded-sm">
+<span class="w-4 select-none">+</span>
+<span>"solatium_100_percent": 4031250</span>
+</div>
+<div class="text-secondary-fixed text-label-sm mt-2">// Section 23 Award Schedule Declared</div>
+<div class="text-surface-container-high text-label-sm">"cala_gazette_seal": "GSR-884(E)/2024"</div>
+</div>
+</div>
+<!-- Cryptographic Hash Ledger Block -->
+<div class="bg-surface-container-low p-space-sm rounded space-y-space-xs font-code-tabular text-label-sm">
+<div class="text-secondary font-bold uppercase tracking-wider font-label-sm">Block Ledger Provenance</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col gap-0.5">
+<span class="text-secondary text-[10px]">PREVIOUS BLOCK HASH (BLOCK #892840)</span>
+<span class="text-on-surface truncate">8d92a1fe982b1c4e7f309a0e6712bb94df...</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col gap-0.5">
+<span class="text-[#107307] text-[10px] font-bold">CURRENT SIGNED BLOCK HASH (BLOCK #892841)</span>
+<span class="text-primary font-bold truncate">c4129b8ae3901b229fbc8890e11894d0774a1...</span>
+</div>
+<div class="flex items-center justify-between text-secondary pt-1 text-label-sm">
+<span>Merkle Proof: Valid</span>
+<span class="text-[#107307] font-bold">0 Drifts Detected</span>
+</div>
+</div>
+<!-- Inspector Action Buttons -->
+<div class="space-y-space-xs pt-space-xs">
+<button class="w-full h-[36px] bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md rounded flex items-center justify-center gap-space-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Download Cryptographic Receipt (XML/PDF)</span>
+</button>
+<button class="w-full h-[36px] bg-surface-container-high text-on-surface hover:bg-surface-dim font-label-md text-label-md rounded flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">send_and_archive</span>
+<span>Submit to CAG Repository (Audit Gateway)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Context Dossier Box -->
+<div class="bg-surface-container p-space-md rounded flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-bold text-primary">Comptroller &amp; Auditor General Node</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Daily automated micro-anchors verified at 00:00 IST. Next synchronization in 9h 27m.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function selectEventRow(rowId) {
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach((r, idx) => {
+      if (idx + 1 === rowId) {
+        r.classList.add('bg-surface-container-high/60');
+        r.classList.remove('bg-surface-container-lowest');
+      } else {
+        r.classList.remove('bg-surface-container-high/60');
+        r.classList.add('bg-surface-container-lowest');
+      }
+    });
+  }
+
+  // Interactive micro-interaction for active log feed heartbeat
+  setInterval(() => {
+    const pulseElement = document.querySelector('.animate-ping');
+    if (pulseElement) {
+      pulseElement.classList.toggle('opacity-75');
+    }
+  }, 1000);
+</script></main></div></body></html>

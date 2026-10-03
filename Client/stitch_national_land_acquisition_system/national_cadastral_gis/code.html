@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary-fixed-dim": "#ffb693",
+          "inverse-primary": "#b0c8eb",
+          "on-secondary-container": "#335b81",
+          "inverse-surface": "#213245",
+          "inverse-on-surface": "#e9f1ff",
+          "primary-container": "#0a2540",
+          "on-background": "#0a1d2f",
+          "surface-dim": "#cadcf4",
+          "on-secondary-fixed": "#001d35",
+          "tertiary-fixed": "#ffdbcb",
+          "surface": "#f8f9ff",
+          "error": "#ba1a1a",
+          "on-surface": "#0a1d2f",
+          "secondary": "#3a6188",
+          "on-error": "#ffffff",
+          "primary-fixed": "#d2e4ff",
+          "on-tertiary-container": "#e46514",
+          "on-tertiary-fixed": "#341000",
+          "surface-variant": "#d2e4fd",
+          "primary": "#000f22",
+          "outline": "#74777e",
+          "surface-bright": "#f8f9ff",
+          "background": "#f8f9ff",
+          "on-secondary": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed-variant": "#1f496f",
+          "on-primary-fixed-variant": "#314865",
+          "secondary-fixed-dim": "#a3caf6",
+          "on-tertiary-fixed-variant": "#7a3000",
+          "tertiary": "#200700",
+          "surface-container": "#e4efff",
+          "secondary-fixed": "#d0e4ff",
+          "error-container": "#ffdad6",
+          "surface-container-low": "#eef4ff",
+          "primary-fixed-dim": "#b0c8eb",
+          "surface-container-highest": "#d2e4fd",
+          "outline-variant": "#c4c6ce",
+          "on-error-container": "#93000a",
+          "on-primary": "#ffffff",
+          "surface-tint": "#49607e",
+          "surface-container-high": "#dbe9ff",
+          "on-surface-variant": "#43474d",
+          "on-tertiary": "#ffffff",
+          "on-primary-fixed": "#001c37",
+          "on-primary-container": "#768dad",
+          "tertiary-container": "#421700",
+          "secondary-container": "#acd2ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-xl": "1.75rem",
+          "gutter": "1rem",
+          "space-md": "0.75rem",
+          "gutter-mobile": "0.75rem",
+          "margin-mobile": "0.75rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.25rem",
+          "margin": "1.5rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "headline-xl-mobile": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "label-lg": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "code-tabular": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "headline-xl-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "12px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "700"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "15px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "code-tabular": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col"><div class="h-16 px-margin flex items-center gap-space-sm bg-primary-container text-on-primary shrink-0"><div class="w-9 h-9 rounded bg-surface flex items-center justify-center font-headline-sm text-headline-sm text-primary-container font-bold">GOI</div><div><div class="font-label-lg text-label-lg tracking-wide uppercase text-on-primary">NLAMS · PORTAL</div><div class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider">Govt. of India Enterprise</div></div></div><div class="flex-1 overflow-y-auto py-space-md px-space-sm"><nav class="space-y-space-lg" data-active-classes="bg-primary-container text-on-primary font-label-md rounded"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">1. Overview</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="national-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>National Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="state-monitoring" href="#"><span class="material-symbols-outlined text-[18px]">map</span><span>State Monitoring</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="central-project-registry" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span><span>Central Project Registry</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="route-directory" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span><span>Route Directory</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">2. Land Acquisition</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="proposals-and-dpr-scrutiny" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Proposals &amp; DPR Scrutiny</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="cadastral-parcels" href="#"><span class="material-symbols-outlined text-[18px]">domain</span><span>Cadastral Parcels</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="statutory-notifications" href="#"><span class="material-symbols-outlined text-[18px]">campaign</span><span>Statutory Notifications</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="joint-verification-and-survey" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>Joint Verification &amp; Survey</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="claims-and-objections" href="#"><span class="material-symbols-outlined text-[18px]">gavel</span><span>Claims &amp; Objections</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="award-and-compensation" href="#"><span class="material-symbols-outlined text-[18px]">request_quote</span><span>Award &amp; Compensation</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="possession-handover" href="#"><span class="material-symbols-outlined text-[18px]">key</span><span>Possession Handover</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">3. Land &amp; Beneficiaries</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="landowners-registry" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Landowners Registry</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="affected-families" href="#"><span class="material-symbols-outlined text-[18px]">groups</span><span>Affected Families</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="grievance-redressal" href="#"><span class="material-symbols-outlined text-[18px]">report_problem</span><span>Grievance Redressal</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="r-and-r-management" href="#"><span class="material-symbols-outlined text-[18px]">foundation</span><span>R&amp;R Management</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">4. Compensation &amp; Finance</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="direct-compensation-dbt" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span>Direct Compensation DBT</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">5. GIS &amp; Intelligence</div><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-label-md rounded" data-path="national-cadastral-gis" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span>National Cadastral GIS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="ai-risk-and-delay-radar" href="#"><span class="material-symbols-outlined text-[18px]">radar</span><span>AI Risk &amp; Delay Radar</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">6. Governance</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="gazette-and-legal-vault" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Gazette &amp; Legal Vault</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="audit-trail-log" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Audit Trail Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="rti-and-transparency" href="#"><span class="material-symbols-outlined text-[18px]">visibility</span><span>RTI &amp; Transparency</span></a></div></nav></div><div class="p-space-sm bg-surface-container shrink-0"><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>L-4 SECURE NODE</span><span class="font-code-tabular text-code-tabular text-secondary">v4.1.8-NIC</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-label-lg text-label-lg font-bold text-on-surface tracking-wide uppercase">Ministry of Road Transport &amp; Highways</span><span class="font-label-sm text-label-sm text-secondary">Department of Land Acquisition and Resettlement</span></div><div class="hidden xl:flex items-center bg-surface-container-low px-space-md py-space-xs rounded gap-space-xs"><span class="material-symbols-outlined text-secondary text-[16px]">search</span><input class="bg-transparent text-body-sm font-body-sm text-on-surface placeholder-on-surface-variant focus:outline-none w-64" placeholder="Search Parcel Khasra, Gazette ID, Project..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span><span class="font-label-sm text-label-sm font-bold text-on-secondary-container">NIC e-Gov Vault Level-4</span></div><div class="flex items-center gap-space-sm"><div class="text-right"><div class="font-label-md text-label-md font-bold text-on-surface">Dr. R. K. Verma, IAS</div><div class="font-label-sm text-label-sm text-secondary">Joint Secretary &amp; Competent Authority</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface w-full px-margin"><div class="flex flex-col w-full">
+<!-- BREADCRUMB & REAL-TIME GEO-TELEMETRY STRIP -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm py-space-sm bg-surface-container-low px-space-md rounded-lg shadow-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="hover:text-primary cursor-pointer transition-colors">NLAMS Central Repository</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">GIS &amp; Intelligence</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">National Cadastral GIS (/gis)</span>
+</div>
+<!-- Sovereign Integration Status Badges -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="tracking-wide">BHU-NAKSHA V3.2 LIVE SYNC</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary">satellite_alt</span>
+<span class="tracking-wide">ISRO BHUVAN 15CM ORTHO ACTIVE</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-tabular text-code-tabular font-medium">
+<span class="material-symbols-outlined text-[12px]">public</span>
+<span>WGS84 / EPSG:4326 &amp; UTM ZONE 43N</span>
+</div>
+</div>
+</div>
+<!-- TOP GIS CADASTRE TOOLBAR -->
+<div class="mt-space-sm bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex flex-wrap items-center justify-between gap-space-md">
+<!-- Spatial Layer Switcher Chips -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold mr-1">Layers:</span>
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center gap-1 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Orthomosaic (15cm)</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">polyline</span>
+<span>RoW Buffer (60m)</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center gap-1 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Bhu-Naksha Khasra Vectors</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[14px] text-error">warning</span>
+<span>Severance Overlay</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[14px] text-secondary">park</span>
+<span>Forest &amp; CRZ Bounds</span>
+</button>
+</div>
+<!-- Precision Geo-Tools & Search -->
+<div class="flex items-center gap-space-sm flex-1 justify-end min-w-[320px]">
+<!-- Quick Parcel Query -->
+<div class="relative flex items-center flex-1 max-w-xs">
+<span class="material-symbols-outlined absolute left-2 text-secondary text-[16px]">pin_drop</span>
+<input class="w-full pl-7 pr-7 py-1 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded focus:bg-surface-container-lowest focus:outline-none transition-colors" placeholder="Enter ULPIN, Khasra, or Km..." type="text" value="Khasra 89/1-A (Samiyala, Vadodara)"/>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant text-[14px] cursor-pointer">close</span>
+</div>
+<!-- Chainage Measure -->
+<button class="p-1.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors flex items-center gap-1 font-label-sm text-label-sm" title="Chainage Measure Tool">
+<span class="material-symbols-outlined text-[16px]">straighten</span>
+<span class="hidden md:inline">Measure</span>
+</button>
+<!-- Export Dropdown -->
+<div class="relative group">
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">download</span>
+<span>Export GIS</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-44 bg-surface-container-lowest rounded shadow-lg hidden group-hover:block z-50 py-1">
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> Certified Map PDF
+          </a>
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined text-[14px]">data_object</span> Cadastral GeoJSON
+          </a>
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined text-[14px]">layers</span> ESRI Shapefile (.shp)
+          </a>
+</div>
+</div>
+<!-- Fullscreen Toggle -->
+<button class="p-1.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors" title="Fullscreen Mode">
+<span class="material-symbols-outlined text-[16px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- MAIN WORKSPACE: TWO-COLUMN GIS COCKPIT -->
+<div class="mt-space-sm flex flex-col xl:flex-row gap-space-sm min-h-[760px] pb-space-lg">
+<!-- LEFT/CENTER: LARGE SPATIAL GIS INTERACTIVE CANVASES -->
+<div class="flex-1 relative bg-surface-container-highest rounded-lg overflow-hidden flex flex-col shadow-sm select-none">
+<!-- Interactive SVG GIS Cadastre Layer with High-Res Satellite Simulation -->
+<div class="relative flex-1 w-full h-full min-h-[560px] bg-slate-900 overflow-hidden cursor-crosshair">
+<!-- Satellite Orthomosaic Texture & GIS Map View -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-65 mix-blend-luminosity filter contrast-125 brightness-95" data-alt="Ultra-high-resolution aerial orthomosaic satellite imagery showing agricultural land parcels, dry canal corridors, rural road infrastructure and clearly demarcated farm boundary hedges under bright natural Indian sunlight with rich soil colors." data-location="Samiyala, Vadodara, Gujarat, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2o_BvSaDNlzkodOls82rdB9eTVUF9c03ZhFrJv0EZJkVxdAxlIw-R5z4jF42df95VyXUJAzNlVxi3SLx0-Fj9IJ0GPslB-F17vbeN51mJPsqaJP8gYvitxckZDDQsnXVgtFzLJyx52968dMUCTqxUwcwyBiGCrM4-JRJqb880urfsq96muTojFZYcASj-9kx07EGYcP7PDt0pGIpKgP171OwHEiEiwv8tIrdVMi1x6tIkiqBov4Yf')"></div>
+<!-- GIS Coordinate Grid & Vector Geometry Overlay -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Pattern Grid -->
+<pattern height="100" id="cadastral-grid" patternunits="userSpaceOnUse" width="100">
+<path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="0.75"></path>
+</pattern>
+<!-- Acquired Corridor Pattern Striping -->
+<pattern height="8" id="acquired-hatch" patterntransform="rotate(45 0 0)" patternunits="userSpaceOnUse" width="8">
+<line opacity="0.35" stroke="#ba1a1a" stroke-width="1.8" x1="0" x2="0" y1="0" y2="8"></line>
+</pattern>
+<!-- Residual Parcel Pattern -->
+<pattern height="8" id="residual-hatch" patterntransform="rotate(-45 0 0)" patternunits="userSpaceOnUse" width="8">
+<line opacity="0.25" stroke="#107307" stroke-width="1.2" x1="0" x2="0" y1="0" y2="8"></line>
+</pattern>
+</defs>
+<!-- Background 100m Coordinate Tick Grid -->
+<rect fill="url(#cadastral-grid)" height="100%" width="100%"></rect>
+<!-- Multi-Lane Express Highway RoW Alignment Envelope (60m Buffer) -->
+<path d="M -50 280 L 350 240 L 680 200 L 1150 170" fill="none" opacity="0.18" stroke="#e46514" stroke-linecap="round" stroke-linejoin="round" stroke-width="64"></path>
+<path d="M -50 280 L 350 240 L 680 200 L 1150 170" fill="none" opacity="0.8" stroke="#ffb693" stroke-dasharray="8 6" stroke-width="2"></path>
+<!-- Highway Centerline -->
+<path d="M -50 280 L 350 240 L 680 200 L 1150 170" fill="none" opacity="0.9" stroke="#ffffff" stroke-dasharray="14 10" stroke-width="1.5"></path>
+<!-- SURROUNDING CADASTRE PARCELS -->
+<!-- Khasra 87 (Western Adjacent) -->
+<polygon fill="rgba(255,255,255,0.05)" points="120,380 260,360 230,220 90,240" stroke="#acd2ff" stroke-dasharray="3 3" stroke-width="1"></polygon>
+<text fill="#cadcf4" font-family="Inter" font-size="11" font-weight="600" x="160" y="300">87</text>
+<!-- Khasra 88 (North Buffer) -->
+<polygon fill="rgba(255,255,255,0.04)" points="260,215 420,195 440,80 270,95" stroke="#acd2ff" stroke-dasharray="3 3" stroke-width="1"></polygon>
+<text fill="#cadcf4" font-family="Inter" font-size="11" font-weight="600" x="340" y="150">88</text>
+<!-- Khasra 90 (Eastern Parcel Traversed) -->
+<polygon fill="rgba(186,26,26,0.12)" points="620,295 790,265 760,140 600,160" stroke="#ba1a1a" stroke-width="1.5"></polygon>
+<text fill="#ffdad6" font-family="Inter" font-size="11" font-weight="600" x="680" y="220">90 (Acq.)</text>
+<!-- Irrigation Nala / Waterbody -->
+<path d="M 520,30 Q 560,180 540,320 T 570,550" fill="none" opacity="0.75" stroke="#3a6188" stroke-width="6"></path>
+<path d="M 520,30 Q 560,180 540,320 T 570,550" fill="none" stroke="#acd2ff" stroke-dasharray="6 4" stroke-width="2"></path>
+<text fill="#acd2ff" font-family="Inter" font-size="9" font-weight="600" transform="rotate(78 555 420)" x="555" y="420">NARMADA MINOR CANAL 4-B</text>
+<!-- TARGET ACTIVE PARCEL: KHASRA 89/1-A -->
+<!-- Residual Land Component (0.630 Ha, Northern Agricultural Portion) -->
+<polygon fill="url(#residual-hatch)" points="310,230 490,205 470,110 290,130" stroke="#107307" stroke-width="2"></polygon>
+<text fill="#eaf7ec" font-family="Inter" font-size="10" font-weight="700" x="350" y="165">89/1-A (RESIDUAL: 0.63 Ha)</text>
+<!-- Acquired Corridor Strip Component (0.820 Ha, Traversed by Express Alignment) -->
+<polygon fill="url(#acquired-hatch)" points="330,335 510,310 490,205 310,230" stroke="#ba1a1a" stroke-width="2.5"></polygon>
+<!-- Outer Pulsing Highlight Boundary on Active Cadastral Parcel -->
+<polygon fill="rgba(10,37,64,0.18)" points="330,335 510,310 470,110 290,130" stroke="#d2e4ff" stroke-dasharray="6 3" stroke-width="2.5"></polygon>
+<!-- DGPS Peg Ground Markers & Chainage Pins -->
+<circle cx="330" cy="335" fill="#ffb693" r="4.5" stroke="#0a2540" stroke-width="1.5"></circle>
+<text fill="#ffdbcb" font-family="Inter" font-size="9" font-weight="700" x="338" y="348">GP-14 (RTK ±0.02)</text>
+<circle cx="510" cy="310" fill="#ffb693" r="4.5" stroke="#0a2540" stroke-width="1.5"></circle>
+<text fill="#ffdbcb" font-family="Inter" font-size="9" font-weight="700" x="518" y="322">GP-15</text>
+<!-- Express Highway Chainage Markers -->
+<g transform="translate(180, 230)">
+<line stroke="#ffffff" stroke-width="2" x1="0" x2="0" y1="-15" y2="15"></line>
+<rect fill="#000f22" height="16" rx="3" stroke="#d2e4ff" stroke-width="1" width="70" x="-35" y="-30"></rect>
+<text fill="#ffffff" font-family="Inter" font-size="9" font-weight="700" text-anchor="middle" x="0" y="-18">Km 412+000</text>
+</g>
+<g transform="translate(480, 195)">
+<line stroke="#ffffff" stroke-width="2" x1="0" x2="0" y1="-15" y2="15"></line>
+<rect fill="#0a2540" height="16" rx="3" stroke="#ffb693" stroke-width="1" width="70" x="-35" y="-30"></rect>
+<text fill="#ffffff" font-family="Inter" font-size="9" font-weight="700" text-anchor="middle" x="0" y="-18">Km 414+000</text>
+</g>
+<g transform="translate(780, 160)">
+<line stroke="#ffffff" stroke-width="2" x1="0" x2="0" y1="-15" y2="15"></line>
+<rect fill="#000f22" height="16" rx="3" stroke="#d2e4ff" stroke-width="1" width="70" x="-35" y="-30"></rect>
+<text fill="#ffffff" font-family="Inter" font-size="9" font-weight="700" text-anchor="middle" x="0" y="-18">Km 416+000</text>
+</g>
+<!-- Active Marker Pin Over Parcel Center -->
+<g transform="translate(405, 255)">
+<circle cx="0" cy="0" fill="rgba(228,101,20,0.3)" r="14"></circle>
+<circle cx="0" cy="0" fill="#e46514" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<rect fill="#000f22" height="26" rx="4" stroke="#ffb693" stroke-width="1.5" width="140" x="-70" y="-42"></rect>
+<text fill="#ffffff" font-family="Inter" font-size="10" font-weight="700" text-anchor="middle" x="0" y="-25">SELECTED: KHASRA 89/1-A</text>
+</g>
+</svg>
+<!-- FLOATING HUD: TOP LEFT BASEMAP PICKER -->
+<div class="absolute top-3 left-3 flex items-center bg-surface-container-lowest/90 backdrop-blur-md rounded shadow-md p-1 gap-1 z-20">
+<button class="px-2 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-xs">Satellite Ortho</button>
+<button class="px-2 py-1 rounded text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium">Bhu-Naksha Vector</button>
+<button class="px-2 py-1 rounded text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium">Topographic</button>
+<button class="px-2 py-1 rounded text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium">Hybrid</button>
+</div>
+<!-- FLOATING HUD: TOP RIGHT COMPASS & TOOLS -->
+<div class="absolute top-3 right-3 flex flex-col gap-2 z-20">
+<!-- Compass / North Indicator -->
+<div class="w-10 h-10 rounded bg-surface-container-lowest/90 backdrop-blur-md shadow-md flex items-center justify-center cursor-pointer hover:bg-surface-container-lowest transition-colors" title="True North Orientation">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px] -mb-1">navigation</span>
+<span class="font-label-sm text-[9px] font-bold text-on-surface">N</span>
+</div>
+</div>
+<!-- Zoom In / Zoom Out Stack -->
+<div class="flex flex-col bg-surface-container-lowest/90 backdrop-blur-md rounded shadow-md overflow-hidden">
+<button class="w-10 h-9 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" title="Zoom In">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<div class="h-[1px] bg-outline-variant/30 w-full"></div>
+<button class="w-10 h-9 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" title="Zoom Out">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<div class="h-[1px] bg-outline-variant/30 w-full"></div>
+<button class="w-10 h-9 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" title="Fit Corridor Extent">
+<span class="material-symbols-outlined text-[18px]">crop_free</span>
+</button>
+</div>
+</div>
+<!-- FLOATING HUD: BOTTOM-LEFT LIVE GEODETIC COORDINATES -->
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/95 backdrop-blur-md px-3 py-2 rounded shadow-md z-20 flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-bold text-primary">DGPS RTK FIXED</span>
+<span class="text-on-surface-variant font-code-tabular text-[10px]">RMS H: 0.012m | V: 0.018m</span>
+</div>
+<div class="font-code-tabular text-body-sm text-on-surface flex items-center gap-3">
+<span><strong>LAT:</strong> 22.258941° N</span>
+<span><strong>LON:</strong> 73.149208° E</span>
+<span><strong>ELEV:</strong> 38.40 m MSL</span>
+</div>
+<!-- Visual Scale Ruler Bar -->
+<div class="flex items-center gap-2 mt-1">
+<div class="flex flex-col">
+<div class="w-28 h-1 bg-primary rounded-xs flex">
+<div class="w-1/2 h-full bg-on-secondary-container"></div>
+<div class="w-1/2 h-full bg-primary-container"></div>
+</div>
+<div class="flex justify-between text-[9px] font-code-tabular text-on-surface-variant">
+<span>0</span>
+<span>25m</span>
+<span>50m</span>
+</div>
+</div>
+<span class="font-code-tabular text-label-sm text-label-sm text-secondary font-semibold">1:2,500</span>
+</div>
+</div>
+<!-- FLOATING HUD: BOTTOM-RIGHT MAP LEGEND PILL -->
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded shadow-md z-20 flex items-center gap-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-xs bg-error opacity-80"></span>
+<span>Acquired RoW</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-xs bg-secondary-container"></span>
+<span>Residual Parcel</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3.5 h-0.5 bg-tertiary-fixed-dim"></span>
+<span>60m RoW Buffer</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3 h-1.5 bg-secondary rounded-xs"></span>
+<span>Canal/Water</span>
+</div>
+</div>
+</div>
+<!-- BOTTOM STRIP OVERLAY: PROJECT CORRIDOR MACRO STATS -->
+<div class="bg-surface-container-low px-space-md py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">PROJECT CORRIDOR</div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">Delhi-Mumbai Expressway (DME Pkg 14)</div>
+</div>
+<div class="h-6 w-[1px] bg-outline-variant/50"></div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">RoW Length</div>
+<div class="font-code-tabular text-body-md font-bold text-on-surface">16.000 Km</div>
+</div>
+<div class="h-6 w-[1px] bg-outline-variant/50"></div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Traversed Khasras</div>
+<div class="font-code-tabular text-body-md font-bold text-on-surface">84 Parcels</div>
+</div>
+<div class="h-6 w-[1px] bg-outline-variant/50"></div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Cadastre Sync</div>
+<div class="font-code-tabular text-body-md font-bold text-secondary">100% Geo-Tagged</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+<span>Zero Forest Overlap</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">rule_folder</span>
+<span>Sec 3D Declared</span>
+</span>
+</div>
+</div>
+</div>
+<!-- RIGHT-HAND CADASTRE PARCEL INSPECTOR PANEL (400PX FIXED WIDTH) -->
+<div class="w-full xl:w-[410px] shrink-0 bg-surface-container-lowest rounded-lg shadow-sm flex flex-col overflow-hidden max-h-[860px]">
+<!-- Panel Header: ULPIN & Administrative ID -->
+<div class="bg-primary-container p-space-md text-on-primary">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary text-on-primary font-label-sm text-label-sm font-bold tracking-wider uppercase">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>Acquisition Vested (Sec 38)</span>
+</span>
+<span class="font-code-tabular text-code-tabular text-on-primary-container font-medium">REV-CADASTRE-VAD</span>
+</div>
+<div class="mt-space-xs">
+<h2 class="font-headline-md text-headline-md font-bold tracking-tight text-on-primary">Khasra No. 89/1-A</h2>
+<div class="font-code-tabular text-body-sm text-inverse-primary mt-0.5">
+            ULPIN: 24-08-01-4410928-891A
+          </div>
+<div class="font-label-sm text-label-sm text-on-primary-container mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Samiyala Village • Vadodara Taluka • Vadodara District (Gujarat)</span>
+</div>
+</div>
+</div>
+<!-- Scrollable Tabular Cadastre Dossier -->
+<div class="flex-1 overflow-y-auto p-space-md space-y-space-md">
+<!-- SECTION 1: SPATIAL DIMENSIONS & SEVERANCE ANALYSIS -->
+<div>
+<div class="flex items-center justify-between pb-1 mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">1. Cadastral Spatial Metrics</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Bhu-Naksha v3.2 Verified</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Total Registered Area -->
+<div class="p-space-sm bg-surface-container-low rounded">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Total Registered Area</div>
+<div class="font-code-tabular text-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">1.4500 Ha</div>
+<div class="text-[10px] text-on-surface-variant">3.583 Acres (As per 7/12 RoR)</div>
+</div>
+<!-- Requisitioned RoW -->
+<div class="p-space-sm bg-error-container/40 rounded">
+<div class="font-label-sm text-label-sm text-on-error-container font-semibold">Acquired for Corridor</div>
+<div class="font-code-tabular text-headline-sm text-headline-sm font-bold text-error mt-0.5">0.8200 Ha</div>
+<div class="text-[10px] text-on-surface-variant">56.55% of Total Parcel</div>
+</div>
+<!-- Residual Balance Area -->
+<div class="p-space-sm bg-surface-container rounded">
+<div class="font-label-sm text-label-sm text-on-secondary-container font-semibold">Residual Land Balance</div>
+<div class="font-code-tabular text-headline-sm text-headline-sm font-bold text-secondary mt-0.5">0.6300 Ha</div>
+<div class="text-[10px] text-on-surface-variant">43.45% (Northern Portion)</div>
+</div>
+<!-- Corridor Design Width -->
+<div class="p-space-sm bg-surface-container-low rounded">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Corridor Width Traversed</div>
+<div class="font-code-tabular text-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">70.00 m</div>
+<div class="text-[10px] text-on-surface-variant">Expressway Standard RoW</div>
+</div>
+</div>
+<!-- Severance Audit Assessment -->
+<div class="mt-space-xs p-space-xs px-space-sm bg-surface-container-low rounded flex items-center justify-between text-body-sm">
+<span class="font-label-sm text-label-sm text-on-surface">Severance Claim Status:</span>
+<span class="font-label-sm text-label-sm font-bold text-on-secondary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+<span>Viable Agricultural Remainder (No Severance Compensation)</span>
+</span>
+</div>
+</div>
+<div class="h-[1px] bg-surface-container-high w-full"></div>
+<!-- SECTION 2: ROR (RECORD OF RIGHTS) 7/12 & OWNERSHIP CLUSTER -->
+<div>
+<div class="flex items-center justify-between pb-1 mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">2. RoR 7/12 Titleholders</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">gavel</span>
+              AnyRoR Gujarat e-Seal
+            </span>
+</div>
+<div class="bg-surface-container-low rounded overflow-hidden">
+<div class="bg-surface-container px-3 py-1.5 flex justify-between font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">
+<span>Titleholder / Khatedar</span>
+<span>Share Ratio</span>
+<span>Direct Compensation</span>
+</div>
+<!-- Row 1: Primary Titleholder -->
+<div class="px-3 py-2 flex items-center justify-between bg-surface-container-lowest">
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">Ramanbhai Shankarbhai Patel</div>
+<div class="font-code-tabular text-[10px] text-on-surface-variant">Aadhaar Vault Ref: ****-****-9104</div>
+</div>
+<div class="font-code-tabular text-body-sm font-bold text-on-surface">40.0%</div>
+<div class="text-right">
+<div class="font-code-tabular text-body-sm font-bold text-on-surface">₹21,03,300</div>
+<span class="font-label-sm text-[9px] text-secondary font-semibold">DBT Mandate Ready</span>
+</div>
+</div>
+<!-- Row 2: Co-Sharer -->
+<div class="px-3 py-2 flex items-center justify-between bg-surface-container-low">
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Pravinbhai S. Patel</div>
+<div class="font-code-tabular text-[10px] text-on-surface-variant">Aadhaar Vault Ref: ****-****-2841</div>
+</div>
+<div class="font-code-tabular text-body-sm font-medium text-on-surface">30.0%</div>
+<div class="text-right">
+<div class="font-code-tabular text-body-sm font-bold text-on-surface">₹15,77,475</div>
+<span class="font-label-sm text-[9px] text-secondary font-semibold">DBT Mandate Ready</span>
+</div>
+</div>
+<!-- Row 3: Co-Sharer -->
+<div class="px-3 py-2 flex items-center justify-between bg-surface-container-lowest">
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Smt. Ushaben S. Patel</div>
+<div class="font-code-tabular text-[10px] text-on-surface-variant">Aadhaar Vault Ref: ****-****-6652</div>
+</div>
+<div class="font-code-tabular text-body-sm font-medium text-on-surface">30.0%</div>
+<div class="text-right">
+<div class="font-code-tabular text-body-sm font-bold text-on-surface">₹15,77,475</div>
+<span class="font-label-sm text-[9px] text-secondary font-semibold">DBT Mandate Ready</span>
+</div>
+</div>
+</div>
+<div class="mt-1 text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary">verified</span>
+<span>AnyROR Encumbrance Certificate verified zero active mortgage/litigation.</span>
+</div>
+</div>
+<div class="h-[1px] bg-surface-container-high w-full"></div>
+<!-- SECTION 3: VALUATION & FIRST SCHEDULE AWARD MATRIX -->
+<div>
+<div class="flex items-center justify-between pb-1 mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">3. RFCTLARR Award Docket</span>
+<span class="font-code-tabular text-label-sm text-label-sm font-semibold text-primary">AWRD-2024-VAD-042</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded space-y-1.5 font-body-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Base Jantar (Circle) Rate:</span>
+<span class="font-code-tabular font-medium text-on-surface">₹28,50,000 / Ha</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Base Land Value (0.820 Ha):</span>
+<span class="font-code-tabular font-semibold text-on-surface">₹23,37,000</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Rural Multiplier Factor (1.25x):</span>
+<span class="font-code-tabular font-semibold text-on-surface">₹29,21,250</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">100% Solatium (Sec 30(1)):</span>
+<span class="font-code-tabular font-semibold text-on-surface">₹29,21,250</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Structural &amp; Tree Assets:</span>
+<span class="font-code-tabular font-semibold text-on-surface">₹0 (Unencumbered Agro)</span>
+</div>
+<div class="h-[1px] bg-outline-variant/40 my-1"></div>
+<div class="flex justify-between items-center bg-surface-container p-2 rounded">
+<span class="font-label-md text-label-md font-bold text-primary">Total Statutory Award (Gross):</span>
+<span class="font-code-tabular text-headline-sm text-headline-sm font-bold text-primary">₹58,42,500</span>
+</div>
+</div>
+</div>
+<div class="h-[1px] bg-surface-container-high w-full"></div>
+<!-- SECTION 4: DGPS CADASTRE GROUND SURVEY ARTIFACTS -->
+<div>
+<div class="flex items-center justify-between pb-1 mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">4. DGPS Cadastral Artifacts</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Panchnama Affirmed</span>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-low rounded">
+<!-- Geotagged Field Survey Photo Thumbnail -->
+<div class="w-24 h-24 shrink-0 rounded overflow-hidden relative shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Digital geotagged field survey photography showing a cadastral granite marker peg boundary stone installed on the edge of a cultivated agricultural farm field in India with RTK rover antenna tripod." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWu9Y1ZUNITzvzjK-v658ZCh-WXATp10zXWFnyIqiGj_3OZpNutFzGUwWCzv-ZHgpF1Iu7QbIUqcjh7TdffG_X4fgLxV8mvNcpBDApUG3b1pqEvtWz4pUgWiH871YqTWs3DGKclVPbMT3fiOcsV-j689frr38GdsBcUjJVbLtFnhEBoPoSJRN29N0MAG59qR-CTDgpUlDlmot6EQu5B2j4EmnlNdtoo6sDkpuQ10fMc9jqCA7jO2wJ"/>
+<span class="absolute bottom-1 left-1 bg-primary text-on-primary font-code-tabular text-[9px] px-1 rounded-xs">GP-14</span>
+</div>
+<!-- Survey Metadata & Signatures -->
+<div class="flex-1 space-y-1 text-body-sm">
+<div class="font-label-md text-label-md font-bold text-on-surface">Field Survey Dossier #SV-981</div>
+<div class="font-code-tabular text-[11px] text-on-surface-variant">
+                DGPS Peg: GP-14 (RTK Fixed ±0.02m)<br/>
+                Survey Timestamp: 08-Nov-2024 • 11:24 IST<br/>
+                SHA256: 7f8b92…e01a4
+              </div>
+<div class="pt-1 flex items-center gap-1 font-label-sm text-label-sm text-on-secondary-container">
+<span class="material-symbols-outlined text-[13px] text-secondary">draw</span>
+<span>Signed: SDM Vadodara &amp; Circle Patwari</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel Action Footer Buttons -->
+<div class="p-space-sm bg-surface-container-low flex flex-col gap-space-xs shadow-md">
+<button class="w-full py-2 px-space-sm rounded bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Download Certified Bhu-Naksha PDF</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-1.5 px-2 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[14px]">account_balance</span>
+<span>Open CALA Court</span>
+</button>
+<button class="py-1.5 px-2 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-container transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[14px]">code</span>
+<span>Export Parcel GeoJSON</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

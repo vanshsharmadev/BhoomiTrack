@@ -30,7 +30,7 @@ public class GeoJsonFeature {
         if (geometryJson != null && !geometryJson.isBlank()) {
             try {
                 ObjectMapper mapper = new ObjectMapper();
-                return mapper.readTree(geometryJson);
+                return mapper.readValue(geometryJson, Map.class);
             } catch (Exception ignored) {
             }
         }
